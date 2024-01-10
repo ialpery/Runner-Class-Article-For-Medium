@@ -9,20 +9,24 @@ public class HomePage {
 
        public HomePage(){PageFactory.initElements(Driver.getDriver(), this);}
 
-    @FindBy(xpath = "//*[text()=\"Login\"]")
-    public WebElement loginButton;
+    @FindBy(id = "login")
+    public WebElement loginButtonHomepage;
 
-    @FindBy(name = "username")
-    public WebElement usernameBox;
+    @FindBy(id = "myAccount")
+    public WebElement myAccountDropdown;
 
-    @FindBy(name = "password")
-    public WebElement passwordBox;
+    @FindBy(id = "register")
+    public WebElement registerButton;
 
-    @FindBy(id = "nvscoreLoginSubmitButton")
-    public WebElement loginSubmitButton;
+    @FindBy(xpath = "//input[@type=\"text\"]")
+    public WebElement searchBar;
 
-    @FindBy(xpath = "(//button[@class=\"registered-menu-button\"])[1]")
-    public WebElement registeredUserMenu;
+    @FindBy(xpath = "//div[contains(text(),'ARA')]")
+    public WebElement searchButton;
+
+
+
+
 
 
 

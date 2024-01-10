@@ -10,7 +10,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import java.time.Duration;
 
 public class Driver {
-    private Driver() {  // Bu yöntemle bir classtan obje üretilmesini engellemeye SINGLETON PATTERN denir.
+    private Driver() {
 
     }
 
