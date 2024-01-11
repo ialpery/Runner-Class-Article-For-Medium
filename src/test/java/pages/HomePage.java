@@ -18,11 +18,14 @@ public class HomePage {
     @FindBy(id = "register")
     public WebElement registerButton;
 
-    @FindBy(xpath = "//input[@type=\"text\"]")
+    @FindBy(xpath = "//div[@class=\"searchBoxOld-M1esqHPyWSuRUjMCALPK\"]/div[2]/input")
     public WebElement searchBar;
 
     @FindBy(xpath = "//div[contains(text(),'ARA')]")
     public WebElement searchButton;
+
+    @FindBy(xpath = "//div[@class=\"searchBoxOld-SMf_9OYwoalnpLfDYGRG\"]/i")
+    public WebElement searchIcon;
 
 
 }

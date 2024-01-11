@@ -10,8 +10,8 @@ public class ProductDetailPage {
     public ProductDetailPage() {
         PageFactory.initElements(Driver.getDriver(), this);}
 
-    @FindBy(xpath = "//div[@class=\"buyback-view-text\"]")
-    public WebElement eskiyiYenileText;
+    @FindBy(xpath = "//span[@class=\"otherBuyOptions\"]")
+    public WebElement otherBuyOptions;
 
     @FindBy(id="//button[@id=\"addToCart\"]")
     public WebElement addToCart;

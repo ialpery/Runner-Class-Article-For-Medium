@@ -114,9 +114,11 @@ public class AutomationExerciseStepDefinitions {
     }
 
     @And("Click to first product")
-    public void clickToFirstProduct() {
+    public void clickToFirstProduct() throws InterruptedException {
 
-
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].scrollIntoView();", productListPage.secondRow);
+        Thread.sleep(500);
         productListPage.firstProduct.click();
 
     }
@@ -125,7 +127,7 @@ public class AutomationExerciseStepDefinitions {
     public void clickToAddToCartButton() throws InterruptedException {
 
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        js.executeScript("arguments[0].scrollIntoView();", productDetailPage.eskiyiYenileText);
+        js.executeScript("arguments[0].scrollIntoView();", productDetailPage.otherBuyOptions);
         Thread.sleep(500);
         productDetailPage.addToCart.click();
 
@@ -144,6 +146,13 @@ public class AutomationExerciseStepDefinitions {
     public void clickToCloseButton() {
 
         productDetailPage.closeButton.click();
+
+    }
+
+    @And("Click the search icon")
+    public void clickTheSearchIcon() {
+
+        homePage.searchIcon.click();
 
     }
 }

@@ -15,5 +15,6 @@ public class ProductListPage {
     @FindBy(xpath = "//li[@id=\"i0\"]")
     public WebElement firstProduct;
 
-
+    @FindBy(xpath = "//li[@id=\"i4\"]/div/a")
+    public WebElement secondRow;
 }

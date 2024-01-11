@@ -5,7 +5,7 @@ Feature: Hepsiburada Test Scenarios
     Given Navigated to url
     And Wait 2 seconds
     When Verify that home page is visible successfully
-    And Click the search bar
+    And Click the search icon
     And Type "macbook"
     And Click to search button
     And Check if the result text include "macbook"
