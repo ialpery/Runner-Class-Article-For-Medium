@@ -1,4 +1,4 @@
-Feature: Search "iPhone" and add to cart a product
+Feature: Hepsiburada Test Scenarios
 
   Scenario: TC01_User will search "iPhone"
 
@@ -16,8 +16,6 @@ Feature: Search "iPhone" and add to cart a product
     Then Click to close button
 
 
-Feature: Register Scenarios
-
   Scenario: TC02_User will receive the verify mail
 
     Given Navigated to url
@@ -28,8 +26,6 @@ Feature: Register Scenarios
     And Click to continue button
     And Check if the email sent successfully message comes as "verify mail was sent to email"
 
-
-Feature: Trying to login with wrong email
 
   Scenario: TC_03_User can not login with wrong email
 

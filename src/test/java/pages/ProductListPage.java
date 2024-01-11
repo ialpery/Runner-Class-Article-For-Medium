@@ -16,5 +16,4 @@ public class ProductListPage {
     public WebElement firstProduct;
 
 
-
 }

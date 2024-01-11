@@ -37,9 +37,7 @@ public class Driver {
                 default:
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--headless=true");
-
-
+                    // options.addArguments("--headless=true");
                     driver = new ChromeDriver(options);
                     break;
             }

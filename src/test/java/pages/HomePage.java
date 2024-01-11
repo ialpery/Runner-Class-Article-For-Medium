@@ -25,10 +25,4 @@ public class HomePage {
     public WebElement searchButton;
 
 
-
-
-
-
-
-
 }
