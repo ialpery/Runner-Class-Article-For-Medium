@@ -14,6 +14,8 @@ import pages.ProductListPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
+import java.util.Set;
+
 public class AutomationExerciseStepDefinitions {
 
     HomePage homePage = new HomePage();
@@ -42,11 +44,11 @@ public class AutomationExerciseStepDefinitions {
         }
     }
 
-    @And("Click to register button")
+    @And("Click to register button from dropdown")
     public void clickToRegisterButton() {
 
-        homePage.myAccountDropdown.getLocation();
-        homePage.loginButtonHomepage.click();
+        homePage.myAccountDropdown.click();
+        homePage.registerButton.click();
         
     }
 
@@ -67,7 +69,7 @@ public class AutomationExerciseStepDefinitions {
     @And("Check if the email sent successfully message comes as {string}")
     public void checkIfTheMessage(String successMessage) {
 
-        Assert.assertEquals(loginPage.sentEmailSuccessMessage, successMessage);
+        Assert.assertEquals(loginPage.sentEmailSuccessMessage.getText(), successMessage);
         
     }
 
@@ -81,7 +83,7 @@ public class AutomationExerciseStepDefinitions {
     @Then("Check if the error message comes as {string}")
     public void checkIfTheMessageComes(String errorMessage) {
 
-        Assert.assertEquals(loginPage.errorMessage, errorMessage);
+        Assert.assertEquals(loginPage.errorMessage.getText(), errorMessage);
 
     }
 
@@ -116,18 +118,30 @@ public class AutomationExerciseStepDefinitions {
     @And("Click to first product")
     public void clickToFirstProduct() throws InterruptedException {
 
+        String firstPageWindowHandle = Driver.getDriver().getWindowHandle();
+
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", productListPage.secondRow);
         Thread.sleep(500);
         productListPage.firstProduct.click();
+        Set<String> windowHandles = Driver.getDriver().getWindowHandles();
+        String secondPageWindowHandle="";
+        for (String each:windowHandles) {
 
+            if (!each.equals(firstPageWindowHandle)){
+                secondPageWindowHandle=each;
+            }
+
+        Driver.getDriver().switchTo().window(secondPageWindowHandle);
+
+        }
     }
 
     @And("Click to add to cart button")
     public void clickToAddToCartButton() throws InterruptedException {
 
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        js.executeScript("arguments[0].scrollIntoView();", productDetailPage.otherBuyOptions);
+        js.executeScript("arguments[0].scrollIntoView();", productDetailPage.productName);
         Thread.sleep(500);
         productDetailPage.addToCart.click();
 
@@ -153,6 +167,14 @@ public class AutomationExerciseStepDefinitions {
     public void clickTheSearchIcon() {
 
         homePage.searchIcon.click();
+
+    }
+
+    @And("Click to login button from dropdown")
+    public void clickToLoginButtonFromDropdown() {
+
+        homePage.myAccountDropdown.click();
+        homePage.loginButtonHomepage.click();
 
     }
 }
