@@ -12,7 +12,7 @@ Feature: Hepsiburada Test Scenarios
     And Click to first product
     And Wait 1 seconds
     And Click to add to cart button
-    And Wait 10 seconds
+    And Wait 1 seconds
     And Check if the successful message comes
     Then Click to close button
 
@@ -39,6 +39,16 @@ Feature: Hepsiburada Test Scenarios
     Then Check if the error message comes as "E-posta adresi eksik veya hatalı."
 
 
+  Scenario: TC04_
+
+    Given Navigated to url
+    And Wait 2 seconds
+    And Switch to Moda ve Güzellik tab
+    And Click to image of the tab
+    And Click to Sıralama dropdown
+    And Select to En yüksek fiyat selection
+    And Click to heart icon of the first product
+    Then Verify that navigated to login page
 
 
 
