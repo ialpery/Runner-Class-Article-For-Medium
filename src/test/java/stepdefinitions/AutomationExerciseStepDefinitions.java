@@ -178,34 +178,6 @@ public class AutomationExerciseStepDefinitions {
 
     }
 
-    @And("Switch to Moda ve Güzellik tab")
-    public void switchToModaVeGüzellikTab() {
-        
-    }
-
-    @And("Click to image of the tab")
-    public void clickToImageOfTheTab() {
-        
-    }
-
-    @And("Click to Sıralama dropdown")
-    public void clickToSıralamaDropdown() {
-        
-    }
-
-    @And("Select to En yüksek fiyat selection")
-    public void selectToEnYüksekFiyatSelection() {
-        
-    }
-
-    @And("Click to heart icon of the first product")
-    public void clickToHeartIconOfTheFirstProduct() {
-        
-    }
-
-    @Then("Verify that navigated to login page")
-    public void verifyThatNavigatedToLoginPage() {
-    }
 }
 
 

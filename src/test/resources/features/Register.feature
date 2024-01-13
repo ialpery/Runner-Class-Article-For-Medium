@@ -1,4 +1,4 @@
-Feature: Hepsiburada Test Scenarios
+Feature: Try to Register and get the Verify Email
 
   Scenario: TC02_User will receive the verify mail
 

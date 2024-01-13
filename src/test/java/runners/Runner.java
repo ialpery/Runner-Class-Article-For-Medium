@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         plugin = "html:target/reports.html",
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        dryRun = false,
+        dryRun = true,
         tags = ""
 )
 

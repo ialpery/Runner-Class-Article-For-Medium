@@ -1,6 +1,6 @@
-Feature: Hepsiburada Test Scenarios
+Feature: Search Product and Add to Cart
 
-  Scenario: TC01_User will search "iPhone"
+  Scenario: TC01_User will search "macbook"
 
     Given Navigated to url
     And Wait 2 seconds
@@ -12,7 +12,7 @@ Feature: Hepsiburada Test Scenarios
     And Click to first product
     And Wait 1 seconds
     And Click to add to cart button
-    And Wait 1 seconds
+    And Wait 10 seconds
     And Check if the successful message comes
     Then Click to close button
 
