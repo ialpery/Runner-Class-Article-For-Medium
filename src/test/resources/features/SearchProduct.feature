@@ -1,5 +1,6 @@
 Feature: Search Product and Add to Cart
 
+  @search @regression
   Scenario: TC01_User will search "macbook"
 
     Given Navigated to url

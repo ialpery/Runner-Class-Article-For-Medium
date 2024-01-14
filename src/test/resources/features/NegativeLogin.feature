@@ -1,6 +1,6 @@
 Feature: Negative Login
 
-
+  @login @smoke @regression
   Scenario: TC_03_User can not login with wrong email
 
     Given Navigated to url
@@ -10,9 +10,4 @@ Feature: Negative Login
     And Type an email to email box
     And Click to login button
     Then Check if the error message comes as "E-posta adresi eksik veya hatalı."
-
-
-
-
-
 

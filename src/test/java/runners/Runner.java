@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
         plugin = "html:target/reports.html",
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        dryRun = true,
-        tags = ""
+        dryRun = false,
+        tags = "@regression"
 )
 
 public class Runner {

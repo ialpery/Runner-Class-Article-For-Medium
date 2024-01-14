@@ -1,5 +1,6 @@
 Feature: Try to Register and get the Verify Email
 
+  @register @smoke @regression
   Scenario: TC02_User will receive the verify mail
 
     Given Navigated to url
